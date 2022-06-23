@@ -1,0 +1,171 @@
+What is Git?
+
+=> Free and open source version control system.
+
+What is Version Control?
+
+=> The management of changes to documents, computer
+programs, large web sites, and other collections of 
+information.
+
+Terms
+
+Directory => Folder
+
+Terminal or Command Line => Interface for Text Commands
+
+CLI => Command Line Interface
+
+cd => Change Directory
+
+Repository => Project, or the folder/place where your
+project is kept
+
+Github => A website to host your repository online
+
+Git Commands
+
+Clone => Bring a repository that is hosted somewhere
+like Github into a folder on your local machine
+
+add => Track your files and changes in Git
+
+commit => Save your files in Git
+
+push => Upload Git commits to a remote repo, like Github
+
+pull => Download changes from remote repo to your local
+machine, the opposite of push
+
+git add . means we gonna upload all the file from that
+directory like all the untrack and updated file gonna
+upload again
+
+
+after uploading we need to commit for changing in the repository
+and our command should be
+
+git commit -m "Added index.html" -m "Some Description"
+
+here m stands for message the first m for the commit message
+and the second one for the description message
+
+now the thing is commit doesnt live our changes to repository
+for changing the repo in the live time we need to use]
+another command is push
+
+for setting up a ssh key on github our command would be
+
+ssh-keygen -t rsa -b 4096 -C "email@example.com"
+
+on the above command t stands for type about the encryption
+
+-b for the condition about the hard encryption
+
+-C for the user email address
+
+we can find the key file by the name we given
+
+ls | grep the key-gen file name
+
+and here we got two file one is public key
+
+now we need to copy the pub key in our clipboard for that matter
+
+we using this command 
+
+pbcopy < the key address
+
+
+on windows the command should be
+
+cat file.pub | clip
+
+after that we need to start the ssh-agent via
+
+=> eval `ssh-agent -s`
+
+
+then add the key to the server
+
+=> ssh-add { key path on the local machine }
+
+for uploading to the github
+
+git push origin master or reponame like main
+
+and on the above we need to called origin 
+
+cause we clone that repo
+
+
+but if we do locally then the command should be differ
+
+
+Git Branching
+
+
+Master Branch and Feature Branch
+
+
+for viewing how many branch we had
+
+just type this command
+
+git branch
+
+
+for creating branch
+
+git checkout -b feature-readme or branch name we got in our mind
+
+
+for changing between the branch we need to use
+
+git checkout { branchname }
+
+
+for adding simple branches to the main or master
+
+branch we use git merge command
+
+
+git diff command using to shoe the difference 
+
+between the branches code
+
+git diff { name of the branch }
+
+
+on here we first push the branch on the github
+
+git push --set-upstream origin { branch name }
+
+we using -u for the shorthand --set-upstream
+
+
+pr stands for pull request
+
+
+for locally pull the code 
+
+just type 
+
+git pull
+
+if you already set the upstream
+
+
+for deleting branch the command should be
+
+
+
+git commit -am {commit name}
+
+
+
+for reseting the merge prolem the command should be
+
+git reset --merge
+
+
